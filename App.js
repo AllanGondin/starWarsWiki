@@ -1,4 +1,4 @@
-import { SplashScreen } from './src/screens/SplashScreen'
+import React from 'react'
 import AppLoading from 'expo-app-loading'
 import { ThemeProvider } from 'styled-components'
 import {
@@ -9,7 +9,8 @@ import {
   SourceSansPro_900Black,
 } from '@expo-google-fonts/source-sans-pro'
 import { theme } from './src/styles'
-
+import { Routes } from './src/routes'
+ 
 export default function App() {
   let [fontsLoaded] = useFonts({
     SourceSansPro_400Regular,
@@ -24,7 +25,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SplashScreen/>
+      <Routes />
     </ThemeProvider>
   )
 }
